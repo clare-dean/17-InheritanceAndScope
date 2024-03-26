@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (9 pts)
+# DONE: 1. (9 pts)
 #
 #   For this _todo_, reference the code below.
 #
@@ -58,6 +58,7 @@ def bar(a):
     return a
 
 def main():
+    a=20
     ### Location 8
     a = foo(a)
     m = bar(a)
@@ -68,33 +69,33 @@ main()
 ###############################################################################
 # 
 #   Location 1          Location 2          Location 3
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a        20         a        20       a        20        
+#   m        X          m        X        m        X       
+#   self.a   5          self.a   5        self.a   X      
+#   self.m   23         self.m   X        self.m   X      
+#   t1.a     X          t1.a     X        t1.a     X       
+#   t1.m     X          t1.m     X        t1.m     X        
+#   t2.a     X          t2.a     X        t2.a     X       
+#   t2.m     X          t2.m     X        t2.m     X       
 #
 #   Location 4          Location 5          Location 6
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a       20          a       20          a       20        
+#   m       X           m       X           m        X       
+#   self.a  5           self.a  5           self.a   X       
+#   self.m  23          self.m  X           self.m   X       
+#   t1.a    X           t1.a    X           t1.a     X       
+#   t1.m    X           t1.m    23          t1.m     X       
+#   t2.a    X           t2.a    X           t2.a     X        
+#   t2.m    X           t2.m    X           t2.m     X       
 #
 #   Location 7          Location 8          Location 9
-#   a                   a                   a               
-#   m                   m                   m               
-#   self.a              self.a              self.a          
-#   self.m              self.m              self.m          
-#   t1.a                t1.a                t1.a            
-#   t1.m                t1.m                t1.m            
-#   t2.a                t2.a                t2.a            
-#   t2.m                t2.m                t2.m            
+#   a        20         a        20         a        45         
+#   m        X          m        X          m        X         
+#   self.a   5          self.a   5          self.a   45         
+#   self.m   23         self.m   X          self.m   X         
+#   t1.a     X          t1.a     X          t1.a     45         
+#   t1.m     X          t1.m     23         t1.m     23        
+#   t2.a     X          t2.a     X          t2.a     X         
+#   t2.m     X          t2.m     X          t2.m     X         
 #
 ###############################################################################

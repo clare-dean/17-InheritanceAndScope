@@ -1,5 +1,5 @@
 ###############################################################################
-# TODO: 1. (4 pts)
+# DONE: 1. (4 pts)
 #
 #   For this module, we are going to build off our Pet class that we created in
 #   m2 of the session 16 coding exercises.
@@ -26,9 +26,33 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Pet: 
+    def __init__(self, name, age): 
+        self.name = name
+        self.age = age
 
+    def __str__(self):
+        return f"Name: {self.name}, Age: {self.age}"
+
+    def speak(self):
+        print(f"{self.name}: Hello, I'm your friendly pet!")
+
+class Dog(Pet):
+    def fetch(self):
+        print(f"{self.name} ran to get the stick!")
+
+    def speak(self):
+        print(f"{self.name}: Woof!")
+
+my_pet = Pet("Fido", 4)
+my_pet.speak()
+
+my_dog = Dog("Bruno", 2)
+print(my_dog)
+my_dog.speak()
+my_dog.fetch()
 ###############################################################################
-# TODO: 2. (4 pts)
+# DONE: 2. (4 pts)
 #
 #   Now, write your own class of whatever type of pet you wish.
 #
@@ -46,7 +70,23 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+class Cat(Pet):
+    def __init__(self, name, age, color, sex):
+        super().__init__(name, age)
+        self.sex = sex
+        self.color = color 
 
+    def info(self):
+        print(f"{self.name} is a {self.sex} cat")
+
+    def sleep(self):
+        print(f"{self.name} is taking a nap... Zzzz")
+
+my_cat = Cat("Whiskers", 3, "gray", "male")
+print(my_cat)
+my_cat.info()
+my_cat.sleep()
+my_cat.speak() 
 ###############################################################################
 # TODO: 3. (4 pts)
 #
@@ -71,4 +111,20 @@
 #
 #   Once you have done this, then change the above _TODO_ to DONE.
 ###############################################################################
+def main():
+   
+    my_dog = Dog("Bruno", 2)
+    my_cat = Cat("Whiskers", 3, "gray", "male")
 
+    print(my_dog)
+    print(my_cat)
+
+    my_dog.speak()  
+    my_cat.speak()  
+
+    my_dog.fetch() 
+    my_cat.info()  
+
+    my_cat.sleep()
+
+main()
